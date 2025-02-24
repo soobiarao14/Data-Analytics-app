@@ -164,10 +164,11 @@ def main():
 
     if df is not None:
         # Display dataset and allow users to interact with visualizations
-        display_data(df)
-        create_pairplot(df)
-        create_heatmap(df)
-        create_boxplot(df)
+        if df is not None:
+            display_data(df)
+            create_pairplot(df)
+            create_heatmap(df)
+            create_boxplot(df)
 
         # Feedback Section
         handle_feedback()
